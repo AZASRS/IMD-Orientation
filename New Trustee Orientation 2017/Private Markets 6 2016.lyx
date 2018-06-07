@@ -1,0 +1,3664 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+
+
+\usetheme{Warsaw}
+%
+%start of text to add page numbers
+%
+\setbeamercolor{mycolor}{fg=white,bg=black}
+\defbeamertemplate*{footline}{shadow theme}{%
+\leavevmode%
+\hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fil,rightskip=.3cm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\hfill\insertshortauthor
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hfill%
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.1\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{mycolor}%
+\hfill\insertframenumber\,/\,\inserttotalframenumber
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+%
+%end of text to add page numbers
+%
+
+
+%\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+
+%
+%below removes navigation symbols
+%you might want this is a version for live presentation
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{footline}[page number]
+
+%
+%sets the page size a little bigger to get more text in a default font size
+\geometry{paperwidth=141mm,paperheight=106mm} 
+
+%comment out next two lines for screen viewing with active hyperlinks 
+\usepackage{pgfpages}
+\pgfpagesuselayout{resize to}[letterpaper,border shrink=5mm,landscape]
+
+%
+%hyperlink settings
+%
+%\usepackage{hyperref}
+%\hypersetup{colorlinks=true,citecolor=green}
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+\end_preamble
+\use_default_options false
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<set-options, echo=FALSE, cache=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+read_chunk('prvmkt 6 2016.R')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<setup,echo=FALSE,message=FALSE,warning=FALSE,cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Private Markets
+\end_layout
+
+\begin_layout Date
+June 24, 2016
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Either use conference name or its abbreviation.
+ 
+\end_layout
+
+\begin_layout Itemize
+Not really informative to the audience, more for people (including yourself)
+ who are reading the slides online
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+6/24/2016
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+optional, should be abbreviation of conference name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Arizona State Retirement System
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSubsection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Overview
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Markets Program
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+ASRS invests in private markets assets pursuant to its strategic asset allocatio
+n.
+ The current allocation to private markets assets is as follows:
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Asset
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Allocation Range
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Private Equity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8% +/- 2%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Real Estate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10% +/- 2%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Private Debt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10% +/- 2%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Private Opportunistic Equity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0% to 3%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Farmland & Infrastructure
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0% to 3% each
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Current Investments
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Cash Adjusted NAVs as of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(lastcfdate,"%B %d, %Y")}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<curinv,echo=FALSE,message=FALSE,warning=FALSE,cache=TRUE,results='asis'>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Why Private Markets?
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strategies and Diversification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Investment strategies and diversification benefits are unique to each asset
+ class.
+\end_layout
+
+\begin_layout Itemize
+Real estate (and we believe the closely related infrastructure and agriculture
+ activities) is generally regarded a distinct asset class with its own risk
+ and return characteristics.
+ MSCI lays out the case in their 
+\begin_inset Quotes eld
+\end_inset
+
+PRE2
+\begin_inset Quotes erd
+\end_inset
+
+ white paper in which they conclude 
+\end_layout
+
+\begin_layout Quote
+Although there is commonality with both stocks and bonds, the majority of
+ real estate risk is driven by endogenous factors.
+ Ultimately, real estate is its own asset class.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://support.msci.com/support/research-paper/model-insight-the-barra-private/01
+6525200
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In the case of private equity and private debt, we consider them extensions
+ of the related equity and fixed income asset classes.
+\end_layout
+
+\begin_layout Itemize
+We invest in private equity in order to pursue specialized strategies and
+ to expand the opportunity set to include firms not listed on public exchanges.
+\end_layout
+
+\begin_layout Itemize
+We invest in private debt largely because of favorable risk/return characteristi
+cs due to dislocations resulting from increased regulatory restrictions
+ on commercial bank lending and the opportunities created thereby.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Markets Returns
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Returns for private markets assets are in the below table.
+\end_layout
+
+\begin_layout Itemize
+Benchmark returns are calculated using daily cash flows as though investments
+ in the benchmark were made on the same and in the same amount as investments
+ in the portfolio.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Inception to date IRR as of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(valdate,"%B %d, %Y")}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<retsum,echo=FALSE,message=FALSE,warning=FALSE,cache=TRUE,results='asis'>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Equity Current vs Legacy Returns 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In September 2010, ASRS appointed new senior management with responsibility
+ for the real estate and private equity portfolios.
+\end_layout
+
+\begin_layout Itemize
+Since that time, ASRS has changed its PE investment process with improved
+ diligence methods and modified strategic focus.
+\end_layout
+
+\begin_layout Itemize
+The results of the current management team compared to the rest of the PE
+ portfolio are shown below.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Inception to date IRR as of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(valdate,"%B %d, %Y")}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<curlegpe,echo=FALSE,message=FALSE,warning=FALSE,cache=TRUE,results='asis'>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Real Estate Current vs Legacy Returns
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS has substantially restructured its approach to real estate under the
+ current management.
+\end_layout
+
+\begin_layout Itemize
+A new strategic plan calls for implementation of the plan primarily through
+ separate accounts and substantial progress has been made implementing this
+ plan.
+\end_layout
+
+\begin_layout Itemize
+A new consultant was retained.
+\end_layout
+
+\begin_layout Itemize
+New underwriting standards and monitoring processes have been put in place.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Inception to date IRR as of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(valdate,"%B %d, %Y")}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<curlegre,echo=FALSE,message=FALSE,warning=FALSE,cache=TRUE,results='asis'>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+The Structure of Private Markets Investments
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The Legal Structure of Private Markets Investments
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Private markets investments are normally made by purchasing a partnership
+ interest or membership interest in an LLC.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Partnership and LLC structures are functionally equivalent and lawyers represent
+ing ASRS consider either to be acceptable.
+\end_layout
+
+\begin_layout Itemize
+For simplicity, we will use partnership terms in this presentation.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+These partnerships are normally managed by a general partner responsible
+ for the business operations of the partnership.
+\end_layout
+
+\begin_layout Itemize
+These partnerships are in various forms which are discussed in this section.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Separate Accounts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A separate account is a partnership formed to make investments in which
+ ASRS is the only investor other than the general partner.
+\end_layout
+
+\begin_layout Itemize
+As the sole investor, ASRS is ordinarily able to negotiate bespoke terms
+ including:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+liquidity rights including the ability to terminate the investment period
+ and commence liquidation, 
+\end_layout
+
+\begin_layout Itemize
+customized investment parameters, 
+\end_layout
+
+\begin_layout Itemize
+accordion features allowing the investment to be increased,
+\end_layout
+
+\begin_layout Itemize
+enhanced information and monitoring features,
+\end_layout
+
+\begin_layout Itemize
+and customized fee arrangements.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+These are usually implemented as evergreen structures intended as long term
+ relationships, but with termination rights favoring ASRS.
+\end_layout
+
+\begin_layout Itemize
+The separate account has become the dominant form for ASRS private markets
+ investing.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Closed End Funds
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Closed end funds (
+\begin_inset Quotes eld
+\end_inset
+
+CEFs
+\begin_inset Quotes erd
+\end_inset
+
+) are partnerships with many limited partners organized by a GP to pursue
+ a business strategy.
+\end_layout
+
+\begin_layout Itemize
+CEFs are the dominant form of legal organization for private equity and
+ much of real estate.
+\end_layout
+
+\begin_layout Itemize
+CEFs have the following features:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Finite life, typically 10 to 15 years including
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+an investment period of 3 to 5 years
+\end_layout
+
+\begin_layout Itemize
+a harvest period of 5 to 7 years plus optional extensions, 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Strong control by the GP with little influence available to LPs, and
+\end_layout
+
+\begin_layout Itemize
+Funding commitments are legally binding on the LPs.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+CEFs have the advantage of strong commitment of the partnership group to
+ each other creating certainty about the continued availability of funds
+ to pursue a strategy.
+\end_layout
+
+\begin_layout Itemize
+But CEFs have weak governance from the perspective of the LP.
+\end_layout
+
+\begin_layout Itemize
+ASRS uses CEFs in its private equity portfolio where they are the only viable
+ option for pursuing the strategy and on a limited basis in the real estate
+ portfolio for certain specialized strategies.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Open End Funds
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+An open fund is a partnership with many limited partners and a managing
+ general partner.
+\end_layout
+
+\begin_layout Itemize
+Open funds are common in core real estate and infrastructure investments.
+\end_layout
+
+\begin_layout Itemize
+Features of an open end fund include:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Organized for an indefinite time period,
+\end_layout
+
+\begin_layout Itemize
+New partners are admitted from time to time and buy in at current asset
+ value,
+\end_layout
+
+\begin_layout Itemize
+Existing partners may redeem their interests, usually on quarterly basis.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ASRS has invested in open end funds for real estate and infrastructure.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Co-Investment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Co-investments are investments, typically at reduced or no fees, alongside
+ a sponsoring fund.
+\end_layout
+
+\begin_layout Itemize
+They are offered as a benefit to larger limited partners who have the infrastruc
+ture to implement them.
+\end_layout
+
+\begin_layout Itemize
+Typically on a single investment which is usually too large to be accommodated
+ in the sponsoring fund.
+\end_layout
+
+\begin_layout Itemize
+Held in a partnership of one managed by the GP which controls all business
+ and liquidity decisions.
+\end_layout
+
+\begin_layout Itemize
+ASRS has executed a number of co-investments with its GPs and Co-investments
+ are the dominant mode of investing for the private opportunistic equity
+ program.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Comparison of Structures
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+The following table summarizes a comparison of these structures:
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="1.5cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Separate Account
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Closed End Fund
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Open End Fund
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Co-Investment
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Alignment of Interest
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Strong through custom investment terms and liquidity features
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Weak
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Neutral
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Neutral
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Fee Structure
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Customized to enhance alignment and better than market
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Market
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Market
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Reduced and often waived
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Liquidity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Good
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+No control
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Quarterly, but could be gated
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+No control
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Investment Criteria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Customized with visibility and ability to influence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+GP discretion within broad parameters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+GP discretion within broad parameters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Investment specific with transparency on underwriting and opportunity to
+ perform individual diligence
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Structure of ASRS Investments
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+ASRS has targeted the following structure for its private markets investments:
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="1.6cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Separate Account
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Closed End Fund
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Open End Fund
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Co-Investment
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Private Equity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+100%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Real Estate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+65% to 85%
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Balance across the other three structures
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Private Debt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+95%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+5%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Private Opportunistic Equity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+100%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Private Markets Portfolios
+\end_layout
+
+\begin_layout Subsection
+Real Estate and Real Assets
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Real Estate Strategy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS Implements its real estate program pursuant to a strategic plan
+\end_layout
+
+\begin_layout Itemize
+ASRS updated this plan in September, 2015
+\end_layout
+
+\begin_layout Itemize
+The ASRS Real Estate Strategic Plan can be found at the following link
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+\begin_inset CommandInset href
+LatexCommand href
+name "www.azasrs.gov/content/key-investment-documents"
+target "https://www.azasrs.gov/content/key-investment-documents"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Real Estate Objectives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Generate attractive risk adjusted returns at or above the actuarial target
+ return of 8%
+\end_layout
+
+\begin_layout Itemize
+Enhance the overall diversification of the ASRS investment program
+\end_layout
+
+\begin_layout Itemize
+Generate regular cash flow from stabilized properties
+\end_layout
+
+\begin_layout Itemize
+The program is benchmarked against the NCREIF ODCE index.
+ The real estate strategic plan provides the following guidance regarding
+ the target return and selection of the benchmark:
+\end_layout
+
+\begin_layout Quotation
+
+\size footnotesize
+\begin_inset Quotes eld
+\end_inset
+
+By selecting the NFI-ODCE as benchmark, the ASRS considers this benchmark
+ as an opportunity cost, not a model portfolio.
+ The ASRS expects that its portfolio will vary significantly from the ODCE
+ index.
+ The ASRS will manage its investments actively and dynamically in the real
+ estate asset class in order to target a net return expectation of 8%.
+ The 8% net objective represents a significant premium over the 6.5% net
+ long term expectation for passive, stable, equity real estate positions.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Real Estate Portfolio Structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+75% of the portfolio is planned for implementation in separate account structure
+s
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In these structures, ASRS will be a majority owner with significant control
+ rights including control over liquidity events and the right to utilize
+ a consultant to validate each property meets the investment criteria and
+ return hurdles applicable to the investment
+\end_layout
+
+\begin_layout Itemize
+ASRS favors separate account structures because of the ability to negotiate
+ custom investment criteria, enhanced controls and enhanced liquidity
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+25% of the portfolio is planned for implementation in commingled structures
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Commingled structures will be used for differentiated strategies that are
+ only available in a commingled structure or not feasible to implement in
+ a separate account 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ASRS commenced building the separate account portfolio in 2013 and this
+ portfolio now constitutes approximately one third of the real estate portfolio.
+ We anticipate the target portfolio structure will be achieved in three
+ to five years as we continue to build out the separate accounts and the
+ legacy commingled funds run off.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Risk Management -- Property Markets 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Real estate performance is strongly influenced by observable and durable
+ demographic and economic trends
+\end_layout
+
+\begin_layout Itemize
+Rental increases occur in situations with high demand and constraints on
+ supply
+\end_layout
+
+\begin_layout Itemize
+Some important trends are:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The demographics of baby boomers and their children profoundly affect real
+ estate demand
+\end_layout
+
+\begin_layout Itemize
+E-commerce affects utilization of industrial and retail space
+\end_layout
+
+\begin_layout Itemize
+The structure of employment away from goods producing to service occupations
+ affects the geographic dispersion of economic activity
+\end_layout
+
+\begin_layout Itemize
+Urbanization is a continuing trend with a pattern of globally significant
+ cities emerging
+\end_layout
+
+\begin_layout Itemize
+Office utilization is becoming much more efficient with a strong downward
+ trend of space utilization per employee
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Risk Management -- Demand Driven Investing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In order to capitalize on these trends, we are creating a customized investment
+ strategy that we like to call 
+\begin_inset Quotes eld
+\end_inset
+
+demand driven investing
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We believe the risk of real estate is not having tenants
+\end_layout
+
+\begin_layout Itemize
+We search for opportunities with strong demand fundamentals driven by age
+ and income demographics, education levels, concentrations of high quality
+ jobs and other relevant location criteria 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We identify sectors that have favorable demand dynamics with demographic
+ or other economic tailwinds and search for markets with supply barriers
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Apartments, industrial, self-storage, medical office, senior housing, student
+ housing are overweight sectors for us
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We have implemented a robust search and recruitment process to find the
+ most qualified parties to be our partners in this program
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Identify first tier operators in each of these sectors to implement through
+ custom separate account arrangement 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Risk Management -- Property Level Underwriting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+All of our separate account agreements require consultant confirmation that
+ each property acquired meets investment criteria and meets applicable return
+ hurdles
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+While there are national real estate estate statistics, property markets
+ are inherently local
+\end_layout
+
+\begin_layout Itemize
+We underwrite every property in the context of its competitiveness in the
+ supply/demand dynamic of its neighborhood
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We are supported in this process by a consultant with deep expertise in
+ this type of property level underwriting and with extensive contacts in
+ the real estate industry
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Risk Management -- Diversification and Leverage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+As required by the strategic plan, the portfolio will be well diversified
+ across
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Property types
+\end_layout
+
+\begin_layout Itemize
+Geography
+\end_layout
+
+\begin_layout Itemize
+Life Cycle Stage
+\end_layout
+
+\begin_layout Itemize
+Vintage Year
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The portfolio will levered at 50% to 60% loan to value
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Leverage is measured at the portfolio level, allowing latitude at the property
+ level
+\end_layout
+
+\begin_layout Itemize
+Higher leverage is permitted on stable properties with access to fixed rate
+ financing but offset by lower leverage on properties in the process of
+ implementing a value creation business plan
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Risk Management -- Capital Markets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Like other asset classes, real estate faces challenges as we approach what
+ may be the end of an extended period of very low interest rates
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+While real estate cap rates are low, spreads to treasuries are higher than
+ historic norms indicating some degree of interest rate increase is already
+ priced into values
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Our strategy in this context is:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Focus on diversification, especially by vintage year
+\end_layout
+
+\begin_layout Itemize
+Highly disciplined underwriting at the property level anticipating future
+ increases in interest rates and cap rates
+\end_layout
+
+\begin_layout Itemize
+Avoid the most expensive core properties which in the current market are
+ 
+\begin_inset Quotes eld
+\end_inset
+
+priced to perfection
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Focus on niche property types such as medical office priced wide of traditional
+ property categories
+\end_layout
+
+\begin_layout Itemize
+Focus on properties with value creation potential through operational improvemen
+t investing directly with expert operators
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Farm Land Investing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS invests in farm land for its long-term inflation protection linked
+ to the value of land and its income generation
+\end_layout
+
+\begin_layout Itemize
+ASRS invested $175 million International Farming Corp (IFC)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+IFC is a multi-generational U.S.
+ farming corporation with deep operational expertise
+\end_layout
+
+\begin_layout Itemize
+They pursue a diversified and value add approach to agricultural investing
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Diverse crop mix and geography with high crop optionality
+\end_layout
+
+\begin_layout Itemize
+Prefer properties with natural resource optionality (water and mineral rights)
+\end_layout
+
+\begin_layout Itemize
+Avoids the expensive Midwest ‘I’ states (Iowa, Illinois, and Indiana)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ASRS negotiated custom structure with right-of-first-offer (ROFO) rights
+ to buy assets upon sale from the fund
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Infrastructure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS invests in infrastructure for long-term inflation protected income
+ streams from assets and systems that support transportation, energy, shipping,
+ and communications
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Global needs exist to support rising populations and antiquated operations
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ASRS invested $300 million with Industry Funds Management (IFM), an Australian-b
+ased infrastructure manager that invests globally using a core strategy
+ in an open-end fund structure
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fund structure provides diversity of exposure across strategies and geography
+\end_layout
+
+\begin_layout Itemize
+Long term vehicle structure is aligned with long term character of assets
+\end_layout
+
+\begin_layout Itemize
+Focused on OECD countries; current portfolio invests across US, UK, and
+ Europe 
+\end_layout
+
+\begin_layout Itemize
+Investments include airports, toll roads, a petroleum pipeline, power generation
+ & transmission facilities, a regulated water & wastewater treatment company,
+ and broadcast and wireless communication infrastructure 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Projects are heavily regulated and have predictable revenue patterns
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Subsection
+Private Equity
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Philosophy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We believe successful private equity investing hinges on three considerations
+\end_layout
+
+\begin_layout Itemize
+Strategy
+\end_layout
+
+\begin_layout Itemize
+Track Record
+\end_layout
+
+\begin_layout Itemize
+Organizational Dynamics
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strategy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Academic research provides evidence on the performance of private equity
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Harris, Jenkinson and Kaplan.
+ Private Equity Performance: What Do We Know? The Journal of Finance, October
+ 2014.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Privae equity buyout funds have outperformed public markets by about 20%
+ in total value over the life of a fund
+\end_layout
+
+\begin_layout Itemize
+Venture Capital has underperformed
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A review of the ASRS portfolio leads to conclusions about comparative performanc
+e
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mid sized buyout funds deliver the best and most consistent returns
+\end_layout
+
+\begin_layout Itemize
+Firms with specialized expertise in restructuring or an industry sector
+ often do well
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strategy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+ASRS favors
+\end_layout
+
+\begin_layout Itemize
+Buyout strategies that emphasize organizational transformation instead of
+ mere financial engineering
+\end_layout
+
+\begin_layout Itemize
+Investments in growing sectors with high revenue growth potential (technology,
+ healthcare)
+\end_layout
+
+\begin_layout Itemize
+Investments in sectors impacted by regulatory change (financial services)
+\end_layout
+
+\begin_layout Itemize
+Investments with sponsors having specialized expertise in restructuring,
+ bankruptcy and turnaround situations
+\end_layout
+
+\begin_layout Itemize
+ASRS is underweight
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Venture Capital
+\end_layout
+
+\begin_layout Itemize
+Europe
+\end_layout
+
+\begin_layout Itemize
+Emerging Markets
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Track Record
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Private equity performance has a high level of dispersion
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Top quartile
+\begin_inset Quotes erd
+\end_inset
+
+ funds outperform median funds by 5% to 10% 
+\end_layout
+
+\begin_layout Itemize
+It is exceedingly rare for managers to perform persistently in the top quartile,
+ but we do find managers persistently above median
+\end_layout
+
+\begin_layout Itemize
+ASRS implements private equity to provide diversification by manager, strategy
+ and vintage year
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ASRS utilizes 
+\begin_inset Quotes eld
+\end_inset
+
+PME
+\begin_inset Quotes erd
+\end_inset
+
+ methods for performance assessment
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+PME (public market equivalent) measurements compare private equity returns
+ to public markets as if one invested in public markets on the same days
+ and in the same amounts as were invested in the PE fund
+\end_layout
+
+\begin_layout Itemize
+ASRS has been a leader in this realm, implementing software for PME methods
+ nearly two years before it was commercially available through Bloomberg
+ and other services 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For a more detailed explanation of PME methods, see this conference presentation
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.rinfinance.com/agenda/2014/talk/KarlPolen.pdf"
+target "http://www.rinfinance.com/agenda/2014/talk/KarlPolen.pdf"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Performance Tracking
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In connection with creation of the software for the PME calculations, ASRS
+ has built a performance tracking and reporting system for private assets
+\end_layout
+
+\begin_layout Itemize
+State Street is the official book of the record and the ASRS system works
+ from information downloaded from the State Street system
+\end_layout
+
+\begin_layout Itemize
+The ASRS system generates
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+a monthly reporting package
+\end_layout
+
+\begin_layout Itemize
+a quarterly performance chart pack
+\end_layout
+
+\begin_layout Itemize
+an internal website with cash flow and performance metrics on each partnership
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Hunter, not hunted
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS uses quantitative screens from the Preqin database and PME methods
+ to discern private equity sponsors with persistent excellent results
+\end_layout
+
+\begin_layout Itemize
+ASRS has established an outbound program to pursue investments with the
+ most highly qualified sponsors
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Organization Dynamics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Although we place much emphasis on quantitative analysis to discern performance
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+this analysis is not securities analysis
+\end_layout
+
+\begin_layout Itemize
+the investor does not participate in the track record deals
+\end_layout
+
+\begin_layout Itemize
+private equity investing is best thought of as a team hiring decision
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Traditional private equity dilgence places emphasis on stability
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+But common sense suggests that the best firms will be dynamic, evolving
+ with changing conditions, weeding out weak performers and promoting high
+ performers
+\end_layout
+
+\begin_layout Itemize
+Research has found that stability is a negative indicator of performance
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Cornelli, Simintzi and Vig.
+ Team Stability and Performance in Private Equity.
+ 2014 Working Paper.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.collerinstitute.com/Research/Paper/264"
+target "http://www.collerinstitute.com/Research/Paper/264"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+So, the question becomes one of attempting to discern a positive dynamic
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Organization Assessment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename TheDenisonModel-highres.jpg
+	width 7cm
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+ASRS has adopted a framework for organizational assessment modeled from
+ Denison Consulting 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+Developed interview questions to explore organizational attributes of adaptabili
+ty, mission, involvement and consistency
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Ongoing work to explore deeper dive organizational assessment
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Subsection
+Private Debt
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Debt Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Private Debt is comprised of illiquid loans and bonds that typically fund
+ highly leveraged companies and real estate properties that are typically
+ too small in size to meet the requirements of the tradable leveraged loan,
+ high yield bond, or commercial mortgage-backed securities markets.
+ For example, Private Debt may consist of secured loans funding leveraged
+ buyouts of small to mid-size companies or mezzanine financing for real
+ estate properties.
+ Returns in the asset class are determined by: 1) the expected returns of
+ individual investments (based on the cash coupon rate or spread over LIBOR
+ and other sources of return including underwriting fees, original issuance
+ discounts and premium call features) and 2) the actual level of credit
+ losses experienced in the underlying portfolios.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+IMD House View: Private Debt offers the most attractive opportunity in the
+ fixed income markets with double-digit yields readily available for investors
+ willing to accept illiquidity.
+ The market opportunity is principally driven by regulatory constraints
+ that make it unattractive for banks to hold illiquid loans or other debt
+ of below investment-grade credit quality.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Debt Characteristics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pros 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+High Expected Net Returns (10-11% on average) 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Substantially higher gross returns (a combination of yield, fees, OID, and
+ call premiums) than comparable public market securities (high yield bonds,
+ tradable bank loans, asset-backed securities, CMBS) 
+\end_layout
+
+\begin_layout Itemize
+Low loss history in underlying portfolios 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Primarily Floating Rate 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Approximately 80% of ASRS’s ongoing private debt commitments are expected
+ to be floating rate investments 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Full Due Diligence by Managers Customized Covenants and Credit Monitoring
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Cons 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Illiquid 
+\end_layout
+
+\begin_layout Itemize
+Delayed Deployment of Capital 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Debt Market Environment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Demand for corporate loans are driven by: 1) middle market buyout and acquisitio
+n activities which need financing, and 2) middle market borrowers which
+ need to refinance existing loans from banks.
+ 
+\end_layout
+
+\begin_layout Itemize
+Regulatory constraints limit banks ability to make below investment-grade,
+ illiquid loans (typically to middle market companies) 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Basel III 
+\end_layout
+
+\begin_layout Itemize
+Dodd-Frank 
+\end_layout
+
+\begin_layout Itemize
+“Leveraged Lending Guidelines” of OCC/Fed/FDIC 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Business Development Companies (“BDCs”) have pulled back on lending due
+ to their depressed equity valuations.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+ASRS Private Debt Program
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Lending Strategies Diversified Across 10 Managers 
+\end_layout
+
+\begin_layout Itemize
+US Corporate 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Five managers targeting unique areas of the middle market 
+\end_layout
+
+\begin_layout Itemize
+One manager targeting larger companies 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+European Corporate 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+One manager targeting middle market lending 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Real Estate Finance 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Two managers targeting three market segments 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Asset Backed 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+One manager targeting unique market opportunity 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Subsection
+Private Opportunistic Equity
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Opportunistic Equity 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The private opportunistic equity program was created to pursue unique opportunit
+ies with superior risk return characteristics due to
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Market dislocations 
+\end_layout
+
+\begin_layout Itemize
+Unique situations not well addressed by the market or not fitting traditional
+ asset classes
+\end_layout
+
+\begin_layout Itemize
+Emerging firms with experienced personnel
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ASRS has committed over $600 million to such opportunities since program
+ inception
+\end_layout
+
+\begin_layout Itemize
+The structure of the investments has dominantly been as co-investments with
+ existing sponsors
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Realized and Mature Investments
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+$150 million to a de novo REIT investing in triple net leased assets
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+fully realized at 23% IRR
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+$75 million committed to a de novo BDC
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+fully realized at 17% IRR
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+$10 million in LNG processing facility
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+all capital returned and expected to achieve 3X
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+$50 million in mid-town Manhattan condominium development
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+half capital returned, 80% sold out and >2X expected
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investments in Process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+$140 million invested in firm providing senior financing to home construction
+ firms
+\end_layout
+
+\begin_layout Itemize
+$100 million committed to a firm investing in asset manager platforms
+\end_layout
+
+\begin_layout Itemize
+$50 million invested in a financial services firm primarily in the annuities
+ business
+\end_layout
+
+\begin_layout Itemize
+$45 million invested in a firm providing receivables factoring services
+ to small and medium sized businesses
+\end_layout
+
+\begin_layout Itemize
+$30 million invested in a firm operating eating disorder centers
+\end_layout
+
+\begin_layout Itemize
+$25 million invested in a Canadian exploration and production energy company
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Monitoring and Compliance
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS has implemented a comprehensive program for monitoring and compliance
+ for its privates markets investments.
+\end_layout
+
+\begin_layout Itemize
+Because of criticisms in the press and compliance activities by the SEC,
+ ASRS reassessed and strengthened its compliance program in 2015.
+\end_layout
+
+\begin_layout Itemize
+ASRS team members made a comprehensive presentation to the investment committee
+ on these in August of 2015.
+ A copy of this report is included in the materials for today's board meeting.
+\end_layout
+
+\begin_layout Itemize
+We will summarize the report and the activities here.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Monitoring and Compliance Roles and Responsibilities (1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS team
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Prepares various reports including monthly private markets holdings and
+ performance, quarterly chart pack and annual reports to the investment
+ committee
+\end_layout
+
+\begin_layout Itemize
+Conducts ongoing investment accounting including capital calls and quarterly
+ reconciliation of cash flows to capital account statements
+\end_layout
+
+\begin_layout Itemize
+Attends quarterly update calls
+\end_layout
+
+\begin_layout Itemize
+Prepares the Comprehensive Annual Financial Report which includes an investment
+ section describing private markets investments and fees paid to asset managers
+\end_layout
+
+\begin_layout Itemize
+Attends annual meetings with asset managers
+\end_layout
+
+\begin_layout Itemize
+Participates on advisory boards when applicable
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The back office provider
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+maintains an official book of record for investments
+\end_layout
+
+\begin_layout Itemize
+calculates returns
+\end_layout
+
+\begin_layout Itemize
+maintains a data base of reports and other documents
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Monitoring and Compliance Roles and Responsibilities (2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Investment consultants
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Validate capital calls
+\end_layout
+
+\begin_layout Itemize
+Prepare compliance reports annually for SMAs and on a rotating basis for
+ other investments including
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Review of valuation policy
+\end_layout
+
+\begin_layout Itemize
+Review of fee calculations including asset management and incentive fees
+\end_layout
+
+\begin_layout Itemize
+Review of expense policies to determine all expense charges to a partnership
+ are appropriate
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+External auditor
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+reviews on a sampling basis individual investments to verify that appropriate
+ financial statements and other records exist for each in vestment, the
+ capital account is reconciled to the financial statements and 
+\end_layout
+
+\begin_layout Itemize
+with respect to a sample of new investments that appropriate diligence procedure
+s were followed and appropriate legal documents are executed memorializing
+ the investment
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Special Requirements for Real Estate SMAs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The real estate consultant performs the following additional services for
+ real estate SMAs
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Review all investments for compliance with investment criteria
+\end_layout
+
+\begin_layout Itemize
+Maintain a dynamic risk management system to monitor forecast risk characteristi
+cs
+\end_layout
+
+\begin_layout Itemize
+Prepare monthly reports on the portfolio
+\end_layout
+
+\begin_layout Itemize
+Review quarterly financial statements and attend quarterly meetings
+\end_layout
+
+\begin_layout Itemize
+Review annual budgets and business plans
+\end_layout
+
+\begin_layout Itemize
+Annual update of property pro formas and appraisals
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fee Management and Negotiations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Management of cost is one of the most important jobs in achieving a successful
+ investment program.
+\end_layout
+
+\begin_layout Itemize
+However, given the dispersion of outcomes, fees cannot be a primary driver
+ in manager selection.
+ An inferior manager cannot discount fees enough to compensate for performance
+ differences.
+\end_layout
+
+\begin_layout Itemize
+The ASRS process starts for screening managers for consistent superior performan
+ce.
+ 
+\end_layout
+
+\begin_layout Itemize
+For each mandate, we attempt to identify multiple highly qualified managers
+ to compete for the assignment.
+\end_layout
+
+\begin_layout Itemize
+Only then do we commence negotiation of fees and terms.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methods for reducing fees
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The bulk of ASRS private markets investments are now implemented in separate
+ accounts
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+These are larger relationships affording negotiating leverage to ASRS
+\end_layout
+
+\begin_layout Itemize
+Custom fee arrangements are negotiated which typically minimize guaranteed
+ while offering incentive fees when earned through high performance
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For commingled funds, ASRS often receives discounts based on 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Size of investment through most favored nation clauses assuring ASRS receives
+ best fees for its investment size
+\end_layout
+
+\begin_layout Itemize
+Fee reductions for first close
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Participation in no fee or reduced fee co-investments
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\end_body
+\end_document

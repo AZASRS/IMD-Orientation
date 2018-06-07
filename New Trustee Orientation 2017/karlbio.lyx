@@ -1,0 +1,252 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Karl Polen
+\end_layout
+
+\begin_layout Author
+Chief Investment Officer
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Associated with ASRS since 1994
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Board member 1994 to 2007 including multiple terms as chairman of the board
+ and chair of investments
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Head of Private Markets Investing 2010 to 2016
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+CIO since 2016
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Experience prior to ASRS
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+33 years private sector experience
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Bulk of experience in CFO and COO roles for two major real estate operators
+ based in Phoenix
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Extensive deal experience negotiating a wide range of transactions involving
+ billions of value
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Operational experience supervising teams of over 1,000 people in diverse
+ business activities
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Board and other Memberships
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Central Arizona Project – board member 1996 to 2000
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Boys and Girls Clubs of Metropolitan Phoenix – board member 2005 to 2010
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+National Academy of Recording Arts and Sciences – voting member since 1977
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Education 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Vanderbilt University, Master of Business Administration (graduated tied
+ for first in class)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Certified Public Accountant (highest score in state on CPA exam, license
+ currently inactive)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+University of Tennessee, studies in mathematics and computer science
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+University of Illinois, Bachelor of Music
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename K Polen008.jpg
+	scale 3
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

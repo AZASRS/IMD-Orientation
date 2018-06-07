@@ -1,0 +1,1796 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+
+
+\usetheme{Warsaw}
+%
+%start of text to add page numbers
+%
+\setbeamercolor{mycolor}{fg=white,bg=black}
+\defbeamertemplate*{footline}{shadow theme}{%
+\leavevmode%
+\hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fil,rightskip=.3cm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\hfill\insertshortauthor
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hfill%
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.1\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{mycolor}%
+\hfill\insertframenumber\,/\,\inserttotalframenumber
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+%
+%end of text to add page numbers
+%
+
+
+%\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+
+%
+%below removes navigation symbols
+%you might want this is a version for live presentation
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{footline}[page number]
+
+%
+%sets the page size a little bigger to get more text in a default font size
+\geometry{paperwidth=141mm,paperheight=106mm} 
+
+%comment out next two lines for screen viewing with active hyperlinks 
+\usepackage{pgfpages}
+\pgfpagesuselayout{resize to}[letterpaper,border shrink=5mm,landscape]
+
+%
+%hyperlink settings
+%
+%\usepackage{hyperref}
+%\hypersetup{colorlinks=true,citecolor=green}
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+\end_preamble
+\use_default_options false
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<set-options, echo=FALSE, cache=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+read_chunk("Trustee_Orientation_final.r")
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<setup, echo=FALSE, warning=FALSE, message=FALSE, cache=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Investment Management
+\end_layout
+
+\begin_layout Date
+2017
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Either use conference name or its abbreviation.
+ 
+\end_layout
+
+\begin_layout Itemize
+Not really informative to the audience, more for people (including yourself)
+ who are reading the slides online
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+2017
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+optional, should be abbreviation of conference name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Arizona State Retirement System
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSubsection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Investment Management Division Overview
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Key People
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Kerry White, Assistant CIO (operations, compliance and reporting)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Associated with ASRS since 2011
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Private Markets Asset Manager 2011 to 2016
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Assistant CIO since 2016
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Experience prior to ASRS
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+24 years of private sector experience
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+20 years of experience in public accounting, practice areas auditing, management
+ consulting and tax
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+COO and CFO experience for non-profit and manufacturing industries
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Operational expertise, internal control, network and system administration
+ for variety of clients and employers
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Board and other Memberships
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Arizona Bicycle Club – president 2015 to current, board member 2013 to 2015,
+ 300+ member organization
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Maricopa County Parks Community Park Volunteer, Usury Park 2010 - 2015 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+AICPA – member 1997 to current, AZCPA – member 2010 to current
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Education 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Grand Canyon University, MBA with an Emphasis in Finance (3.97 GPA)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Certified Public Accountant (Active license in both Arizona and Washington
+ State)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Specialty Certifications in Governmental and Non-Profit Accounting & Auditing,
+ and Technology
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+St.
+ Martins University, Bachelor of Arts in Accounting, Cum Laude
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Governance and Compliance
+\end_layout
+
+\begin_layout Section
+Investment Policy Statement
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Statement - Purpose
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Add a link to the IPS
+\end_layout
+
+\end_inset
+
+The Investment Policy Statement, (
+\begin_inset CommandInset href
+LatexCommand href
+name "Link to IPS"
+target "https://www.azasrs.gov/sites/default/files/pdf/Investment%20Policy%20Statement%20-%20may%202015_0.pdf"
+type "file:"
+
+\end_inset
+
+) is designed to communicate and establish the following:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+investment beliefs,
+\end_layout
+
+\begin_layout Itemize
+goals & objectives,
+\end_layout
+
+\begin_layout Itemize
+constraints, and
+\end_layout
+
+\begin_layout Itemize
+guidelines for development and implementation of the ASRS strategic and
+ tactical asset allocation policy.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The investment policy statement is important to the long term success of
+ the ASRS investment objectives.
+\end_layout
+
+\begin_layout Itemize
+The investment policy statement was developed with the following goals:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Clearly and explicity establish the parameters governing ASRS assets
+\end_layout
+
+\begin_layout Itemize
+Establish a target asset allocation that is both long-term and dynamic to
+ take advantage of market opportunities and expected to achieve its investment
+ rate of return objectives
+\end_layout
+
+\begin_layout Itemize
+Protect the financial health of the ASRS
+\end_layout
+
+\begin_layout Itemize
+Establish a framework for monitoring investment activity and facilitate
+ communication between Board, Staff and other involved parties.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Statement - Goals & Objectives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+These are macro-level expected outcomes that the ASRS wants to achieve
+\end_layout
+
+\begin_layout Itemize
+Goals:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Maximizes fund rates of return for acceptable levels of fund risk.
+\end_layout
+
+\begin_layout Itemize
+Achieves 75th percentile rates of return compared to peers.
+\end_layout
+
+\begin_layout Itemize
+Achieves long-term fund rates of return equal to or greater than the actuarial
+ assumed interest rate.
+\end_layout
+
+\begin_layout Itemize
+Achieves long-term econcomic and actuarial funded states of 100 percent
+\end_layout
+
+\begin_layout Itemize
+Mitigates contribution rate volatility
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Collectively, the above goals incorporate the following elemets that are
+ importan for a fund's comprehensive investment structure:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Complementary use of absolute and relative rates-of-return perspectives.
+\end_layout
+
+\begin_layout Itemize
+Complementary use of asset-only and asset-liability perspectives.
+\end_layout
+
+\begin_layout Itemize
+Complementary use of economic and actuarial perspectives.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Objectives:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Acheive a 20-year rolling annual total fund net rate of return equal to
+ or greater than the actuarial assumed interest rate of 8%.
+\end_layout
+
+\begin_layout Itemize
+Acheive 1-year and 3-year rolling acutal total fund net rates of return
+ equal to or grather than the return of the ASRS asset allocation policy
+ (SAAP) benchmark.
+\end_layout
+
+\begin_layout Itemize
+Acheive 1-year and 3-year rolling annual net rates of return for ASRS strategic
+ asset claases that are equal to or greater than their respective strategic
+ asset class benchmarks.
+\end_layout
+
+\begin_layout Itemize
+Ensure sufficient monies are available to meet pension benefits, health
+ insurance, member refunds, administrative payments, and other cash-flow
+ requirements.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Statement - Investment Beliefs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The investment belief are to ensure the developmentof congruent and synergistic
+ investment strategies, and to ensure the effective and efficient allocation
+ of resources.
+ They determine the general paradigm within which investment strategies
+ are developed, investment ideas are reviewed, and investment decisions
+ are implemented.
+ Modifications to these beliefs will occur if experiential, academic, conceptiua
+l and/or practical perspectives suggest that a superior belief system exists.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Asset class decisions are key:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Decisions with respect to which assest classes and sub-asset classes to
+ invest in and allocations to these have a greater impact on total fund
+ investment returns than decisions in which specific securities to invest.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Theories and concepts must be sound:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Over longer periods of time, investment outcomes conform to logical theories
+ and concepts.
+ Significant deviations from theoretically and conceptually sound investment
+ constructs are usually not sustainable and typically self-reverting.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+House capital market views are imperative:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Development and articulation of sound House Views will ensure consistentcy
+ amount investment decisions, clairy of investment direction, baselines
+ for debates, and conformity of understanding.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Investment strategies must be forward looking:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use forward looking insights, rather than simply relying on past strategies.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Public Markets are generally informationally efficient.
+\end_layout
+
+\begin_layout Itemize
+Market frictions are highly relevant:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+And can be significantly deterimental to investment performance.
+ As a result transactions will initiated only to the extent there is a strong
+ level of conviction that they will result in increases investment returns
+ or decreased risks net of all market frictions.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Internal investment professionals are the foundation of a successful investment
+ program.
+\end_layout
+
+\begin_layout Itemize
+External investment management is beneficial.
+\end_layout
+
+\begin_layout Itemize
+Investment consultants:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Utilized when there is a need in one of the four areas: independence, perspectiv
+e, special skills, and resource allocation.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Trustee expertise:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Trustees often have experience in various areas of investment management
+ and this expertise should be utilized while ensuring a spearativion between
+ Board oversight and staff management.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Statement - Investment Considerations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Arizona State Statutes
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS investments may be limited by Arizona Revised Statues.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Time horizon
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS is managed on a going-concern basis and uses the following timeframes
+ for construction decisions and contribution rate determinations.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Portfolio contruction decisions: Strategic asset allocations focus on medium
+ term (3 - 5 years) capital market expectations, subject to the constraint
+ of meeting the long-term assumed actuarial rate based on long-term (30
+ year) capital market assumptions.
+ Tactial deviation decisions are based on shorter-term (less than 3-5 year)
+ captial market expectations.
+\end_layout
+
+\begin_layout Itemize
+Contribution rate determination: Liabilities are discounted based upon long-term
+ capital market expectations.
+ Contribution rates areset based upon longer (10 year) investment valuation
+ smoothing periods, and longer-term (30 years 'closed') deficit/surplus
+ amortization periods.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Liquidity and Cash-Flow
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Planning for and effectively managing cash to meet anticpated needs and
+ ensure adequate liquidity.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Statement - Risk Management, Monitoring and Reporting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A risk management framework is applied for identifying, managing and reporting
+ on ASRS investments.
+\end_layout
+
+\begin_layout Itemize
+Provide assurance to Executive Management and Board that investment management
+ programs are designed, implemented and maintained to achieve investment
+ goals and objectives.
+\end_layout
+
+\begin_layout Itemize
+Reporting periodicity and detail vary depending on target audience.
+\end_layout
+
+\begin_layout Itemize
+Use of leverage is determined at the manager level and monitored by Investment
+ Management and ASRS consultants.
+\end_layout
+
+\begin_layout Itemize
+Use of derivatives is determined at the manager level and monitored by Investmen
+t Management and ASRS consultants.
+\end_layout
+
+\begin_layout Itemize
+Management of currency exposure is determined at manager level and monitored
+ by Investment Management and ASRS consultants.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Statement - Asset Allocation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The ASRS asset mix will reflect investments in strategic and tactical asset
+ classes and strategies whose collective risk/return profile are anticipated
+ to achieve its long-term investment rate of return goals and objectives.
+\end_layout
+
+\begin_layout Itemize
+Dynamic approach where initiation and periodicity will primarly be a function
+ of market dynamics.
+\end_layout
+
+\begin_layout Itemize
+Study will be used to determin the long-term policy asset weights.
+\end_layout
+
+\begin_layout Itemize
+Asset reviews in addition to periodic studies are conducted as warrante
+ or triennally, whichever is shorter.
+\end_layout
+
+\begin_layout Itemize
+The study may include, but not be limited to the following:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Discussion and analysis of existing and evolving asset classes and investment
+ strategies.
+\end_layout
+
+\begin_layout Itemize
+Evaluation of expected sources of investment returns, risk and diversification
+ (quantitatively/ qualitatively).
+ 
+\end_layout
+
+\begin_layout Itemize
+Reviewing investment industry developments (academic and pragmatic).
+\end_layout
+
+\begin_layout Itemize
+Utilization of quantitative tools (e.g., efficient frontier mean‐variance
+ optimization, risk budgeting) and evaluation of multiple scenarios.
+ 
+\end_layout
+
+\begin_layout Itemize
+Reviewing and engaging discussions regarding capital market assumptions.
+ 
+\end_layout
+
+\begin_layout Itemize
+Reviewing asset allocation policies from other public and non‐public entities.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Policy Statement - Other Topics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The investment policy statement addresses the other following items:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rebalancing
+\end_layout
+
+\begin_layout Itemize
+Voting of portfolio proxies
+\end_layout
+
+\begin_layout Itemize
+Securities litigation
+\end_layout
+
+\begin_layout Itemize
+Securities lending
+\end_layout
+
+\begin_layout Itemize
+Management of investment fees
+\end_layout
+
+\begin_layout Itemize
+Roles and responsibilities
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Investment Policies
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strategic Investment Policies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+don't list them.
+ describe them and how they are enacted (board approval).
+ not sip3, 4, 8 and 9 are going away
+\end_layout
+
+\end_inset
+
+Strategic Investment Policies (SIPs) are overall guidance for major functions
+ within the fund.
+ The Strategic Investment Policies cover such topics as:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Asset Allocation
+\end_layout
+
+\begin_layout Itemize
+Tactical Positioning and Rebalancing
+\end_layout
+
+\begin_layout Itemize
+Securities Litigation 
+\end_layout
+
+\begin_layout Itemize
+Investment Manager, Partner, and Co-Investment Selection and Oversight 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+separate slide on 6 describing the investment process and diligence requirements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Funding Policy
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Investment Manager, Partner and Co-Investment Selection and Oversight
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+don't list all the SOPs; just broadly describe them and how they are established
+ (director approval)
+\end_layout
+
+\end_inset
+
+SIP 6 covers the selection of public and private market investment managers
+ and partners.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Approved Dealers
+\end_layout
+
+\begin_layout Itemize
+Trade Dispute Resolution
+\end_layout
+
+\begin_layout Itemize
+Delegation of Authority for Pre and Post Trade
+\end_layout
+
+\begin_layout Itemize
+Trade Processes and Verification
+\end_layout
+
+\begin_layout Itemize
+Cash Assetization and Trade Management Program
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Standard Operating Policies 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+don't list all the SOPs; just broadly describe them and how they are established
+ (director approval)
+\end_layout
+
+\end_inset
+
+The Standard Operating Policies (SOP's) govern activities for public equity
+ and fixed income activities and include such things as:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Approved Dealers
+\end_layout
+
+\begin_layout Itemize
+Trade Dispute Resolution
+\end_layout
+
+\begin_layout Itemize
+Delegation of Authority for Pre and Post Trade
+\end_layout
+
+\begin_layout Itemize
+Trade Processes and Verification
+\end_layout
+
+\begin_layout Itemize
+Cash Assetization and Trade Management Program
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+SOP's are written as needed to codify processes or to fulfill best practices.
+\end_layout
+
+\begin_layout Itemize
+They are reviewed by the CIO with final approval provided by the Director.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Other Policies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Other Policies cover areas within investment management that while not necessari
+ly related directly to trading, do have an impact on how the program works.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+OTHER001 - Continuity of Operations Plan 
+\end_layout
+
+\begin_layout Description
+OTHER002 - Commission Recaputre Program 
+\end_layout
+
+\begin_layout Description
+OTHER003 - Proxy Voting 
+\end_layout
+
+\begin_layout Description
+OTHER004 - Securities Lending Compliance 
+\end_layout
+
+\begin_layout Description
+OTHER005 - Placement Agent Disclosure 
+\end_layout
+
+\begin_layout Description
+OTHER006 - Fee Negotiations 
+\end_layout
+
+\begin_layout Description
+OTHER007 - Legal Process for Investments 
+\end_layout
+
+\begin_layout Description
+OTHER008 - Tax and Other Compliance Filings
+\end_layout
+
+\begin_layout Description
+OTHER009 - Isreal Divestment Policy
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Private Markets Policies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The Private Market Policies govern activities for private market investments
+ (private equity, real estate, public opportunistic and private debt, private
+ opportunistic equity, farmland and infrastructure).
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+PRIVM001 - Fund Setup and Legal Process
+\end_layout
+
+\begin_layout Description
+PRIVM002 - Signing Authority
+\end_layout
+
+\begin_layout Description
+PRIVM003 - Audit and Appraisals Reviewed
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Compliance
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Compliance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Compliance functions are composed of middle and back office functions that
+ utilize both internal and external resources to ASRS
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+need a slide describing the players – the custodian; the general consultant;
+ the asset class consultants; the auditor
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+need to discuss external standards GIPS, GASB, GFOA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Middle office compliance functions include:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pre and post trade compliance on public and fixed income trading
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+more – ensure that every trade meets the individual portfolio restrictions,
+ portfolio is compliance with statutes, etc - take a look at the compliance
+ report for what is tested
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Performance and attribution
+\end_layout
+
+\begin_layout Itemize
+Corporate actions processing
+\end_layout
+
+\begin_layout Itemize
+Proxy voting
+\end_layout
+
+\begin_layout Itemize
+Performance reporting
+\end_layout
+
+\begin_layout Itemize
+Cash management
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Back office compliance functions include:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Custody
+\end_layout
+
+\begin_layout Itemize
+Investment compliance
+\end_layout
+
+\begin_layout Itemize
+Portfolio/fund accounting
+\end_layout
+
+\begin_layout Itemize
+Fund administration
+\end_layout
+
+\begin_layout Itemize
+Legal
+\end_layout
+
+\begin_layout Itemize
+Tax
+\end_layout
+
+\begin_layout Itemize
+Reporting
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+These functions are designed to ensure that ASRS is in compliance with its
+ policies and procedures, state and federal rules and laws in regards to
+ its investment holdings.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Compliance Initiatives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Specific practices noted below 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+'initiatives' implies not complete.
+ suggest 
+\begin_inset Quotes eld
+\end_inset
+
+practices
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ highlight the ASRS commitment to high standards for compliance include:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use of Bloomberg AIM/OMS for pre and post trade compliance for all public
+ trading, to ensure that every trade complies with their defined portfolio
+ requirements.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ensures every trade complies with portfolio requirements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+State Street provides post trade daily compliance which 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+do a separate slide on private markets compliance – capital call verification,
+ verification of fees, etc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Daily & monthly compliance monitoring at the individual portfolio and external
+ investment level on a post-trade basis.
+\end_layout
+
+\begin_layout Itemize
+Total fund level compliance & monthly statue test for Arizona Revised Statute
+ investment limits and Arizona Restricted Country Test.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Compliance Initiatives - Private Markets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Private Markets compliance practices include:
+\end_layout
+
+\begin_layout Itemize
+Our custodian bank monitors capital calls, financial reporting, performance
+ and reconciliation of all private markets investments.
+\end_layout
+
+\begin_layout Itemize
+Private Equity and Real Estate Consultants review each and every capital
+ call for appropriateness, authenticity and compliance with governing documents
+ prior to approving payment.
+\end_layout
+
+\begin_layout Itemize
+Review of Private Markets investments on a rotational basis to:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+confirm fees are correctly calculated and reported, 
+\end_layout
+
+\begin_layout Itemize
+valuation policies are observed, and 
+\end_layout
+
+\begin_layout Itemize
+the partnership is being administered in accordance with the partnership
+ agreement.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Reporting
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reporting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ASRS has implemented a comprehensive and transparent system of reports to
+ keep ASRS management, the Board and public on the ASRS investments.
+\end_layout
+
+\begin_layout Itemize
+Utilizes statistical analysis to report on performance for public and private
+ investments.
+\end_layout
+
+\begin_layout Itemize
+Report frequency and detail is dependent on audience.
+\end_layout
+
+\begin_layout Itemize
+Utilizing the R programming lanuage and Lyx document processor with investment
+ data able to do reproducible analysis efficiently and effectively.
+\end_layout
+
+\begin_layout Itemize
+Investments continues to expand the reporting through the use of R and Lyx
+ to develop additional analysis on investments for review, modeling, and
+ diligence.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+do a slide on internally generated reports mentioning the portfolio analytics
+ for each portfolion; discuss CAFR which is internally generated but externally
+ audited
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Various reporting is performed by our external consultants for diligence,
+ compliance and performance reporting, including but not limited to:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+NEPC - our general investment consultant produces the following reports
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+custodian is investment book of record and NEPC is performance book of record;
+ NEPC monitors all IMD activity to ensure it complies with all policies
+ and reports on this to board 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Board Report - consist of total fund performance, measurement of performance
+ to goals, objectives and benchmarks on quarterly basis
+\end_layout
+
+\begin_layout Itemize
+Investment Performance Report - detailed report on performance of asset
+ classes and to asset level on quarterly basis
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+State Street - our custodial bank produces the following reports
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Risk report - reviews risk on public investments and scenario analysis each
+ quarter
+\end_layout
+
+\begin_layout Itemize
+Monthly Statute Test - compliance with Arizona Revised Statutes and Restricted
+ Countries test on fund level
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Private Equity and Real Estate Consultants
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Compliance review reports on private investment funds
+\end_layout
+
+\begin_layout Itemize
+Due diligence reporting on potential investments
+\end_layout
+
+\begin_layout Itemize
+Annual real estate asset reviews
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Part
+Equities
+\end_layout
+
+\begin_layout Part
+Fixed Income
+\end_layout
+
+\begin_layout Part
+Real Estate and Real Assets
+\end_layout
+
+\begin_layout Part
+Multi-Asset and Other Strategies
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
